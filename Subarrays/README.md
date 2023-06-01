@@ -37,3 +37,44 @@ public class Solution {
         return count;
     }
 }
+Maximum subarray:
+----------------------
+Two ways we can solve this with O(n^2)
+1. Using sum count 
+int C[] = {1,2,3,4,-10}; int ans = 0;
+ for(int i=0;i<n;i++){
+            int sum = 0;
+            for(int j=i;j<n;j++){
+                sum = sum + C[j];
+                    ans = Math.max(ans,sum);
+            }
+        }
+2. Using prefix sum
+3. Generate prefix sum 
+4. C[] = {1,3,6,10,0};
+5. for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                if(i==0){
+                sum = prefix_sum[j];
+                }
+                else{
+                sum = prefix_sum[j]-prefix_sum[i-1];
+                }
+                ans = Math.max(ans,sum);
+            }
+        }
+        
+   3. Kadane's algorithm
+     for(int i=0;i<n;i++){
+     if(sum>=0){
+     sum = sum + C[i];
+     }
+     else{
+     sum = C[i];
+     }
+     }
+     
+
+
+
+
