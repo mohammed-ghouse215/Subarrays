@@ -18,8 +18,18 @@ length = 4;
 Total number of subarays 3 is a part of
 Range
 (index+1) * (Length-index)
-
-
+------------------------------------------
+Generate all subarrays
+for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                ArrayList<Integer> small = new ArrayList<>();
+                for(int k=i;k<=j;k++){
+                    small.add(A[k]);
+                }
+                ans.add(small);
+            }
+        }
+---------------------------------------------                                                              
 An amazing Substring is one that starts with a vowel (a, e, i, o, u, A, E, I, O, U).
 // Code //
 public class Solution {
@@ -37,8 +47,8 @@ public class Solution {
         return count;
     }
 }
+-----------------------------------------------------
 Maximum subarray:
-----------------------
 Two ways we can solve this with O(n^2)
 1. Using sum count 
 int C[] = {1,2,3,4,-10}; int ans = 0;
@@ -73,8 +83,27 @@ int C[] = {1,2,3,4,-10}; int ans = 0;
      sum = C[i];
      }
      }
-     
-
-
-
-
+-----------------------------------------------
+Alternating subarrays
+Day 36 - Intermediate DSA: Arrays : Subarrays HomeWork Question -1
+------------------------------------------------
+Generate Subarrays with given length
+for(int i=0;i<=n-B;i++){
+    int sum = 0;
+   for(int j=i;j<B+i;j++){
+    System.out.print(A[j]+" "); 
+          sum = sum +A[j];
+      }
+    System.out.print("Sum = "+sum);
+    System.out.println();
+}
+------------------------------------------------
+Day 41 - Intermediate DSA: Bit Manipulations - 1 HW Question-3
+Day 47 - Intermediate DSA : Hashing - 1  HW Question-1
+Day 48 - Intermediate DSA : Hashing - 2  AS Question-1
+Day 48 - Intermediate DSA : Hashing - 2  HW Question-4
+Day 48 - Intermediate DSA : Hashing - 2  HW Question-5
+Day 55 - Advanced DSA : Arrays - 1  HW Question-1
+Day 55 - Advanced DSA : Arrays - 1 AS Question-3
+Day 68 - Advanced DSA : Sorting - 3  HW Question-1
+Day 92 - Advanced DSA : Tries - 2 HW Question-2
