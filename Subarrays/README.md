@@ -1,6 +1,24 @@
-# Question 1
 # Amazing Subarray
+Total number of subarrays = n*(n+1)/2; n= length of array
+No of Subarrays starting with an index = length of array - index;
+
 You are given a string S, and you have to find all the amazing substrings of S.
+If A[] = {1,2,3,4}
+No of subarrays = 4*(4+1)/2 = 10;
+1
+1 2       2 
+1 2 3     2 3     3  
+1 2 3 4   2 3 4   3 4  4
+
+Number subarrys starting with 3 
+index = 2 
+length = 4;
+4-2 = 2;
+
+Total number of subarays 3 is a part of
+Range
+(index+1) * (Length-index)
+
 
 An amazing Substring is one that starts with a vowel (a, e, i, o, u, A, E, I, O, U).
 // Code //
@@ -19,5 +37,3 @@ public class Solution {
         return count;
     }
 }
-
-
